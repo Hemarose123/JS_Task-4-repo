@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Calculation</title>
+  </head>
+  <body>
+    <h2>Calculate the Power of a Number</h2>
+    <input type="number" id="base" placeholder="Enter base" />
+    <input type="number" id="exponent" placeholder="Enter exponent" />
+    <button onclick="calculatePower()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+      function calculatePower() {
+        let base = document.getElementById("base").value;
+        let exponent = document.getElementById("exponent").value;
+        let result = Math.pow(base, exponent);
+        document.getElementById("result").innerText = "Result: " + result;
+      }
+    </script>
+  </body>
+</html>

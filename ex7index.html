@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age-Based Messages</title>
+  </head>
+  <body>
+    <h2>How Old Are You?</h2>
+    <input type="number" id="age" placeholder="Enter your age" />
+    <button onclick="checkAge()">Check</button>
+    <p id="result"></p>
+
+    <script>
+      function checkAge() {
+        let age = parseInt(document.getElementById("age").value);
+        let message;
+
+        if (age < 16) {
+          message = "You can't drive.";
+        } else if (age >= 16 && age <= 17) {
+          message = "You can drive but not vote.";
+        } else if (age >= 18 && age <= 24) {
+          message = "You can vote but not rent a car.";
+        } else {
+          message = "You can do pretty much anything.";
+        }
+
+        document.getElementById("result").innerText = "Message: " + message;
+      }
+    </script>
+  </body>
+</html>
